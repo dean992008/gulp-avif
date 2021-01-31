@@ -8,7 +8,7 @@ GULP-AVIF based to lib (sharp)[https://www.npmjs.com/package/sharp]
 
 ### Usage
 
-```
+```js
 const gulp = require('gulp');
 const gulpAvif = require('gulp-avif');
 
@@ -21,7 +21,7 @@ gulp.task('default', ()=>{
 
 ### Example based integration AVIF
 
-```
+```html
 <picture>
     <source type="image/avif" srcset="./to/show.avif" />
     <source type="image/webp" srcset="./to/show.webp" />
