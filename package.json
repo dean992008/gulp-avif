@@ -1,0 +1,16 @@
+{
+  "name": "gulp-avif",
+  "version": "0.0.1",
+  "description": "gulp plugin for convert images from png or jpg to avif",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "plugin-error": "1.0.1",
+    "sharp": "0.27.1",
+    "through2": "4.0.2"
+  }
+}
