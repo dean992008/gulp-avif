@@ -4,7 +4,7 @@
 
 This is gulp plugin for convertation PNG and JPG images to AVIF
 
-GULP-AVIF based to lib (sharp)[https://www.npmjs.com/package/sharp]
+GULP-AVIF based to lib [sharp](https://www.npmjs.com/package/sharp)
 
 ### Usage
 
