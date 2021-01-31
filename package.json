@@ -8,7 +8,7 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "plugin-error": "1.0.1",
     "sharp": "0.27.1",
     "through2": "4.0.2"
