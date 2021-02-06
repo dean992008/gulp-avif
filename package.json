@@ -4,13 +4,30 @@
   "description": "gulp plugin for convert images from png or jpg to avif",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint ./index.js"
   },
-  "author": "",
+  "author": "Dmytro Myroshnychenko",
   "license": "ISC",
   "dependencies": {
     "plugin-error": "1.0.1",
     "sharp": "0.27.1",
     "through2": "4.0.2"
-  }
+  },
+  "devDependencies": {
+    "eslint": "7.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dean992008/gulp-avif.git"
+  },
+  "keywords": [
+    "gulp",
+    "avif",
+    "images",
+    "conventer"
+  ],
+  "bugs": {
+    "url": "https://github.com/dean992008/gulp-avif/issues"
+  },
+  "homepage": "https://github.com/dean992008/gulp-avif#readme"
 }

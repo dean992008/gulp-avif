@@ -2,10 +2,17 @@ const through = require('through2').obj;
 const sharp = require('sharp');
 const PluginError = require('plugin-error');
 
-ENABLED_FORMATS = ['png', 'jpg']
+const ENABLED_FORMATS = ['png', 'jpg'];
+
+const optionsByDefualt = {
+    quality: 90,
+    lossless: false,
+    speed: 5,
+    chromaSubsampling: '4:2:0'
+}
 
 function avif(options) {
-    return stream = through(async (file, enc, callback) => {
+    return through(async (file, enc, callback) => {
 
         const source = await sharp(file.contents);
 
@@ -18,7 +25,7 @@ function avif(options) {
             })
             .then(() => {
                 return source
-                    .avif()
+                    .avif(Object.assign(optionsByDefualt, options))
                     .toBuffer();
             })
             .then((stream) => {
