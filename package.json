@@ -10,21 +10,27 @@
   "license": "ISC",
   "dependencies": {
     "plugin-error": "1.0.1",
-    "sharp": "0.27.1",
+    "sharp": "0.28.1",
     "through2": "4.0.2"
   },
   "devDependencies": {
-    "eslint": "7.19.0"
+    "eslint": "7.25.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dean992008/gulp-avif.git"
   },
   "keywords": [
-    "gulp",
+    "gulpplugin",
     "avif",
-    "images",
-    "conventer"
+    "image",
+    "conventer",
+    "img",
+    "picture",
+    "photo",
+    "png",
+    "jpg",
+    "jpeg"
   ],
   "bugs": {
     "url": "https://github.com/dean992008/gulp-avif/issues"

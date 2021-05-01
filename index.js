@@ -13,7 +13,6 @@ const optionsByDefualt = {
 
 function avif(options) {
     return through(async (file, enc, callback) => {
-
         const source = await sharp(file.contents);
 
         source

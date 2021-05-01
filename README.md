@@ -1,5 +1,3 @@
-## ⚠️ This plugin in develop process
-
 # GULP-AVIF
 
 This is gulp plugin for convertation PNG and JPG images to AVIF
@@ -35,7 +33,7 @@ gulp.task('default', ()=>{
 
 `options` Object ? output options
 - `options.quality` number  quality, integer 1-100 (optional, default 90)
-- `options.lossless` boolean  use lossless compression (optional, default true)
+- `options.lossless` boolean  use lossless compression (optional, default false)
 - `options.speed` boolean  CPU effort vs file size, 0 (slowest/smallest) to 8 (fastest/largest) (optional, default 5)
 - `options.chromaSubsampling` string  set to '4:4:4' to prevent chroma subsampling otherwise defaults to '4:2:0' chroma subsampling, requires libvips v8.11.0 (optional, default '4:2:0')
 
