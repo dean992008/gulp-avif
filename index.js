@@ -2,7 +2,7 @@ const through = require('through2').obj;
 const sharp = require('sharp');
 const PluginError = require('plugin-error');
 
-const ENABLED_FORMATS = ['png', 'jpg'];
+const ENABLED_FORMATS = ['png', 'jpg', 'jpeg'];
 
 const optionsByDefualt = {
     quality: 90,
