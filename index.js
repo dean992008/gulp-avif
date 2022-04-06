@@ -2,7 +2,7 @@ const through = require('through2').obj;
 const sharp = require('sharp');
 const PluginError = require('plugin-error');
 
-const ENABLED_FORMATS = ['png', 'jpg', 'jpeg'];
+const ENABLED_FORMATS = ['png', 'jpg', 'jpeg', 'svg'];
 
 const optionsByDefualt = {
     quality: 90,
@@ -21,8 +21,14 @@ function avif(options) {
                 if (!ENABLED_FORMATS.includes(metadata.format)) {
                     throw new Error(`.${metadata.format} not supported`);
                 }
+                return metadata;
             })
-            .then(() => {
+            .then((metadata) => {
+                console.log('test' + metadata.format);
+                let img = source;
+                if (metadata.format === 'svg' && options && (options.width || options.height)) {
+                    img = source.resize(options.width, options.height);
+                }
                 return source
                     .avif(Object.assign(optionsByDefualt, options))
                     .toBuffer();
