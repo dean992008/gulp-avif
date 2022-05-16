@@ -24,7 +24,6 @@ function avif(options) {
                 return metadata;
             })
             .then((metadata) => {
-                console.log('test' + metadata.format);
                 let img = source;
                 if (metadata.format === 'svg' && options && (options.width || options.height)) {
                     img = source.resize(options.width, options.height);
