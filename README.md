@@ -11,7 +11,7 @@ const gulp = require('gulp');
 const gulpAvif = require('gulp-avif');
 
 gulp.task('default', ()=>{
-    return gulp.src('./from/*.{png,jpg}')
+    return gulp.src('./from/*.{png,jpg,svg}')
         .pipe(gulpAvif())
         .pipe(gulp.dest('./to/'));
 });
@@ -46,6 +46,9 @@ gulp.task('default', ()=>{
 Throws Error  Invalid options
 
 ### Releases
+
+#### v 1.1.1
+- Removed unneed `console.log`
 
 #### v 1.1.0
 - Added support SVG source file
