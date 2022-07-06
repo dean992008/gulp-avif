@@ -12,21 +12,25 @@ const optionsByDefualt = {
 }
 
 function avif(options) {
-    return through(async (file, enc, callback) => {
+    return through(async (file, _, callback) => {
+        if (file.isNull()) {
+			callback(null, file);
+			return;
+        }
+        
+        const ext = file.extname.slice(1).toLowerCase();
+		if (!ENABLED_FORMATS.includes(ext)) {
+			callback(null, file);
+			return;
+		}
+
         const source = await sharp(file.contents);
 
         source
             .metadata()
             .then((metadata) => {
-                if (!ENABLED_FORMATS.includes(metadata.format)) {
-                    throw new Error(`.${metadata.format} not supported`);
-                }
-                return metadata;
-            })
-            .then((metadata) => {
-                let img = source;
                 if (metadata.format === 'svg' && options && (options.width || options.height)) {
-                    img = source.resize(options.width, options.height);
+                    source.resize(options.width, options.height);
                 }
                 return source
                     .avif(Object.assign(optionsByDefualt, options))
@@ -38,7 +42,7 @@ function avif(options) {
                 callback(null, file);
             })
             .catch((err) => {
-                callback(new PluginError('gulp-avif', err));
+                callback(new PluginError('gulp-avif', err, {fileName: file.path}));
             });
     });
 }
