@@ -4,17 +4,24 @@
   "description": "gulp plugin for convert images from png or jpg to avif",
   "main": "index.js",
   "scripts": {
-    "test": "eslint ./index.js"
+    "jest": "jest",
+    "eslint": "eslint ./index.js",
+    "test": "npm run eslint && npm run jest"
   },
   "author": "Dmytro Myroshnychenko",
   "license": "ISC",
   "dependencies": {
     "plugin-error": "1.0.1",
-    "sharp": "0.30.5",
+    "sharp": "0.30.7",
     "through2": "4.0.2"
   },
   "devDependencies": {
-    "eslint": "8.12.0"
+    "eslint": "8.18.0",
+    "file-type": "16.5.3",
+    "jest": "28.1.1",
+    "p-event": "4.2.0",
+    "vinyl": "2.2.1",
+    "vinyl-file": "3.0.0"
   },
   "repository": {
     "type": "git",
