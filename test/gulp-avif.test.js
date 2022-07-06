@@ -79,8 +79,8 @@ test('TODO: should not convert unsupported files', async () => {
 	// 	contents: Buffer.from('contents')
 	// }));
   // const data = await promise;
-  
-  // This feature not implument in plugin. This test always fail. 
+
+  // This feature not implument in plugin. This test always fail.
 
   // expect(data.contents.toString()).toBe('contents');
 
@@ -96,8 +96,8 @@ test('TODO: emits a plugin error when the image is corrupt', async () => {
 	// stream.end(file);
 
   // const error = await promise;
-  
-  // This feature not implument in plugin. This test always fail. 
+
+  // This feature not implument in plugin. This test always fail.
 
   // expect(error instanceof PluginError).toBe(true);
   // expect(error.plugin).toBe('gulp-avif');
